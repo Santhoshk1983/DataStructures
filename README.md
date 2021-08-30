@@ -1,5 +1,10 @@
-- 👋 Hi, I’m @Santhosh
-- Reach out on: santhoshk.1983@gmail.com
+MyInfo
+{
+- Name: Santhosh 
+- Email: santhoshk.1983@gmail.com
+- Welcome Msg: 👋 Hi
+}
+
 
 <!---
 Santhoshk1983/Santhoshk1983 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.

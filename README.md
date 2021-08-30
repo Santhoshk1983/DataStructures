@@ -1,8 +1,8 @@
 MyInfo
 {
+- Welcome Msg: 👋 Hi
 - Name: Santhosh 
 - Email: santhoshk.1983@gmail.com
-- Welcome Msg: 👋 Hi
 }
 
 

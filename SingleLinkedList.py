@@ -7,6 +7,13 @@ class linkedlist:
     def __init__(self):
         self.head=None
 
+    def printlinkedlist (self):
+        temp = self.head
+
+        while (temp):
+            print(temp.data)
+            temp = temp.next
+
 ll1 = linkedlist()
 ll1.head = node(1)
 second = node(2)
@@ -15,7 +22,4 @@ third =node(3)
 ll1.head.next=second
 second.next=third
 
-print(ll1.head.data)
-print(ll1.head.next)
-print(second.data)
-print(third.data)
+ll1.printlinkedlist()

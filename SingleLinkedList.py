@@ -11,10 +11,14 @@ class linkedlist:
     # Traversing linked list
     def printlinkedlist (self): 
         temp = self.head
-        print("Complete List")
+        
         while (temp):
-            print(temp.data,"->",end="")
+
+            print(temp.data,end="")
+            if temp.next != None:
+                print("->",end="")
             temp = temp.next
+        print ("\n")
 
     # Inserting as Header Node
     def HeaderNodeAdd (self, new_data):
@@ -31,6 +35,19 @@ class linkedlist:
         new_node.next=prev_node.next
         prev_node.next=new_node
 
+    def AddTail (self,new_data):
+
+        new_node = node(new_data)
+        if self.head==None:
+            self.head=new_node
+            return
+        else :
+            temp =self.head
+            while(temp.next):
+                temp = temp.next
+            temp.next = new_node
+
+
 ll1 = linkedlist()
 ll1.head = node(1)
 second = node(2)
@@ -43,5 +60,8 @@ ll1.printlinkedlist()
 ll1.HeaderNodeAdd(0)
 ll1.printlinkedlist()
 
-ll1.AddNodeInbetween(second.next,5)
+ll1.AddNodeInbetween(ll1.head.next,5)
+ll1.printlinkedlist()
+
+ll1.AddTail("X")
 ll1.printlinkedlist()

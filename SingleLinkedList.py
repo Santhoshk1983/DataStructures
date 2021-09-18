@@ -11,9 +11,9 @@ class linkedlist:
     # Traversing linked list
     def printlinkedlist (self): 
         temp = self.head
-
+        print("Complete List")
         while (temp):
-            print(temp.data)
+            print(temp.data,"->",end="")
             temp = temp.next
 
     # Inserting as Header Node

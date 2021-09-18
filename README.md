@@ -3,6 +3,7 @@ MyInfo
 - Welcome Msg: 👋 Hi
 - Name: Santhosh 
 - Email: santhoshk.1983@gmail.com
+- Most informative Python link: https://leanpub.com/insidethepythonvirtualmachine/read
 }
 
 

@@ -47,6 +47,49 @@ class linkedlist:
                 temp = temp.next
             temp.next = new_node
 
+    def DelNode(self,data):
+        del_data = data
+        flag=0
+        list_length=0
+        data_list_num=0
+       
+       # Check the data availability in linked list
+
+        while(self.head):
+            list_length = list_length+1
+            if (self.head.data == del_data):
+                flag=1
+                data_list = list_length -1
+            self.head = self.head.next
+        if flag==1:
+            print("\nData is available for deletion. List length is ",list_length)
+            print("Data available in list position -> ",data_list,"\n")
+        else:
+            print("\nData is not available in linked list. List length is ",list_length)
+
+
+     # Check if its a first & only node then delete
+        print("data_list ",data_list)
+        print("List length", list_length)
+        if (data_list==0 and list_length==0):
+            self.head=None
+
+    # Check if data is a last node and delete
+
+        while(self.head):
+            if self.head.data == del_data:
+                break
+            prev = self.head
+            next = self.head.next
+
+            prev.next = next
+            next = next.next
+
+
+
+
+
+
 
 ll1 = linkedlist()
 ll1.head = node(1)
@@ -64,4 +107,7 @@ ll1.AddNodeInbetween(ll1.head.next,5)
 ll1.printlinkedlist()
 
 ll1.AddTail("X")
+ll1.printlinkedlist()
+
+ll1.DelNode(2)
 ll1.printlinkedlist()

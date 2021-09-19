@@ -69,18 +69,18 @@ class linkedlist:
 
 
      # Check if its a first & only node then delete
-        print("data_list ",data_list)
-        print("List length", list_length)
+        
         if (data_list==0 and list_length==0):
             self.head=None
-
-    # Check if data is a last node and delete
-
-        while(self.head):
-            if self.head.data == del_data:
-                break
+        
+        else:
+            while(self.head):
+                if self.head.data == del_data:
+                    break
             prev = self.head
+            print("prev data",prev.data)
             next = self.head.next
+            print("nxt data",next.data)
 
             prev.next = next
             next = next.next

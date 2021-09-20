@@ -51,39 +51,43 @@ class linkedlist:
         del_data = data
         flag=0
         list_length=0
-        data_list_num=0
+        
        
        # Check the data availability in linked list
-
-        while(self.head):
+        temp = self.head
+        while(temp):
             list_length = list_length+1
-            if (self.head.data == del_data):
+            if (temp.data == del_data):
                 flag=1
                 data_list = list_length -1
-            self.head = self.head.next
+            temp = temp.next
         if flag==1:
-            print("\nData is available for deletion. List length is ",list_length)
-            print("Data available in list position -> ",data_list,"\n")
+            print("\nData is available for deletion. List length is ",list_length,". Data available in list position ",data_list,".\n")
+            
         else:
             print("\nData is not available in linked list. List length is ",list_length)
 
 
-     # Check if its a first & only node then delete
+    
         
+ # Check if its a first & only node then delete
+        temp=self.head
         if (data_list==0 and list_length==0):
-            self.head=None
-        
-        else:
-            while(self.head):
-                if self.head.data == del_data:
-                    break
-            prev = self.head
-            print("prev data",prev.data)
-            next = self.head.next
-            print("nxt data",next.data)
+            temp=None
 
-            prev.next = next
-            next = next.next
+
+ # Delete if its in the middle
+
+        temp=self.head
+        while(temp is not None):
+            if temp.data == del_data:
+                break
+            prev = temp
+            temp=temp.next
+
+
+        prev.next = temp.next
+        temp = None
 
 
 
